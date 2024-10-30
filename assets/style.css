@@ -1,0 +1,22 @@
+html{
+    height: 100%;
+    background: #FFF;
+}
+body{
+    min-height: 100%;
+}
+
+.menu{
+    color: #333;
+    /* Body/Medium/Body 2 */
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 150% */
+   
+}
+.logo{
+    width: 4.6875rem;
+    height: 2.0625rem;
+}
