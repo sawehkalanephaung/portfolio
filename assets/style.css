@@ -20,3 +20,44 @@ body{
     width: 4.6875rem;
     height: 2.0625rem;
 }
+
+ul, li{
+    list-style: none;
+}
+
+
+
+.social-icons a {
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0d6efd !important; /* Blue */
+}
+
+/* Or create different hover colors for each platform */
+.social-icons a.email:hover {
+    color: #EA4335 !important; /* Gmail red */
+}
+
+.social-icons a.linkedin:hover {
+    color: #0A66C2 !important; /* LinkedIn blue */
+}
+
+.social-icons a.github:hover {
+    color: #171515 !important; /* GitHub dark */
+}
+
+.social-icons a.instagram:hover {
+    color: #E4405F !important; /* Instagram pink */
+}
+
+.social-icons a.facebook:hover {
+    color: #1877F2 !important; /* Facebook blue */
+}
+
+
+.social-icons a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
