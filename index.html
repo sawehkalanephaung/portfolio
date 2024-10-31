@@ -19,34 +19,51 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
   </head>
   <body>
-    <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-        <a
-          href="#"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
           <img class="logo" src="/assets/imgs/logo.png" alt="logo" />
         </a>
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark">About me</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark">Contact</a>
-          </li>
-          <button type="button" class="btn btn-outline-primary me-2">
-            Resume
-          </button>
-        </ul>
-      </header>
-    </div>
-
-    <div class="container col-xxl-8 px-4 py-5 bg-light mb-4">
+      
+        <!-- Burger Menu -->
+        <div class="burger-wrapper d-lg-none">
+          <label class="burger-1" for="burger">
+            <input type="checkbox" id="burger" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      
+        <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-item nav-link" href="#about">About me</a>
+            <a class="nav-item nav-link" href="#experience">Experience</a>
+            <a class="nav-item nav-link" href="#education">Education</a>
+            <a class="nav-item nav-link" href="#skills">Skills</a>
+            <a class="nav-item nav-link" href="#contact">Contact</a>
+            <button type="button" class="btn btn-outline-primary me-2">Resume</button>
+            <!-- add dark mode button here-->
+            <button id="darkModeToggle" class="btn btn-outline-primary">
+              <i class="fas fa-moon"></i>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+    <div class="container col-xxl-8 px-4 py-5 mb-4">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img
@@ -72,8 +89,10 @@
         </div>
       </div>
     </div>
+    </div>    <!-- About me -->
 
-    <div class="container col-xxl-8 px-4 py-5 bg-light mb-4">
+    <div class="container-fluid ">
+    <div class="container col-xxl-8 px-4 py-5  mb-4">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <h1 class="display-5 fw-bold text-primary lh-1 mb-3">About me</h1>
@@ -99,14 +118,17 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container col-xxl-8 px-4 py-5 bg-light">
+    <!-- Experience -->
+
+    <div class="container-fluid ">
+    <div class="container col-xxl-8 px-4 py-5 ">
       <div class="col-10 col-sm-8 col-lg-6">
         <h1 class="display-5 fw-bold text-primary lh-1 mb-3">Experience</h1>
       </div>
-      <div class="row g-4">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
+        <div class="col-sm-12 mb-4">
+          <div class="card bg-light">
             <div class="card-body">
               <h5 class="card-title">Senior Project: ApartEase</h5>
               <h6 class="card-subtitle mb-2 text-muted">
@@ -125,22 +147,24 @@
               <h6 class="card-subtitle mb-2 text-muted">Tools</h6>
               <div class="dev-tools d-flex flex-row mb-3">
                 <ul class="d-flex justify-content-start">
-                  <li><i class="fab fa-html5 p-2"></i> HTML5</li>
-                  <li><i class="fab fa-css3-alt p-2"></i> CSS3</li>
-                  <li><i class="fab fa-js p-2"></i> JavaScript</li>
-                  <li><i class="fab fa-react p-2"></i> React.js</li>
-                  <li><i class="fab fa-bootstrap p-2"></i> Bootstrap</li>
-                  <li><i class="fab fa-git-alt p-2"></i> Git</li>
+                  <li><i class="fab fa-html5 p-2"></i></li>
+                  <li><i class="fab fa-css3-alt p-2"></i></li>
+                  <li><i class="fab fa-js p-2"></i></li>
+                  <li><i class="fab fa-react p-2"></i></li>
+                  <li><i class="fab fa-bootstrap p-2"></i></li>
+                  <li><i class="fab fa-git-alt p-2"></i></li>
                 </ul>
               </div>
-              <a href="#" class="btn btn-primary"
-                >Github <i class="fas fa-arrow-right ms-2"></i
-              ></a>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-primary"
+                  >Github <i class="fas fa-arrow-right ms-2"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="card">
+        <div class="col-sm-12 mb-4">
+          <div class="card bg-light">
             <div class="card-body">
               <h5 class="card-title">UI/UX Design: E-bike & Scooter Renter</h5>
               <h6 class="card-subtitle mb-2 text-muted">
@@ -159,23 +183,26 @@
               <h6 class="card-subtitle mb-2 text-muted">Tools</h6>
               <div class="dev-tools d-flex flex-row mb-3">
                 <ul class="d-flex justify-content-start">
-                  <li><i class="fab fa-html5 p-2"></i> HTML5</li>
-                  <li><i class="fab fa-css3-alt p-2"></i> CSS3</li>
-                  <li><i class="fab fa-js p-2"></i> JavaScript</li>
-                  <li><i class="fab fa-react p-2"></i> React.js</li>
-                  <li><i class="fab fa-bootstrap p-2"></i> Bootstrap</li>
-                  <li><i class="fab fa-git-alt p-2"></i> Git</li>
+                  <li><i class="fab fa-html5 p-2"></i></li>
+                  <li><i class="fab fa-css3-alt p-2"></i></li>
+                  <li><i class="fab fa-js p-2"></i></li>
+                  <li><i class="fab fa-react p-2"></i></li>
+                  <li><i class="fab fa-bootstrap p-2"></i></li>
+                  <li><i class="fab fa-git-alt p-2"></i></li>
                 </ul>
               </div>
+              <div class="d-flex justify-content-end">
               <a href="#" class="btn btn-primary"
                 >Github <i class="fas fa-arrow-right ms-2"></i
               ></a>
+              </div>
             </div>
           </div>
         </div>
+          <!-- end card 2-->
 
-        <div class="col-sm-6">
-          <div class="card">
+        <div class="col-sm-12 mb-4">
+          <div class="card bg-light">
             <div class="card-body">
               <h5 class="card-title">
                 Front-End Web development: Food order and delivery
@@ -194,23 +221,25 @@
               <h6 class="card-subtitle mb-2 text-muted">Tools</h6>
               <div class="dev-tools d-flex flex-row mb-3">
                 <ul class="d-flex justify-content-start">
-                  <li><i class="fab fa-html5 p-2"></i> HTML5</li>
-                  <li><i class="fab fa-css3-alt p-2"></i> CSS3</li>
-                  <li><i class="fab fa-js p-2"></i> JavaScript</li>
-                  <li><i class="fab fa-react p-2"></i> React.js</li>
-                  <li><i class="fab fa-bootstrap p-2"></i> Bootstrap</li>
-                  <li><i class="fab fa-git-alt p-2"></i> Git</li>
+                  <li><i class="fab fa-html5 p-2"></i></li>
+                  <li><i class="fab fa-css3-alt p-2"></i></li>
+                  <li><i class="fab fa-js p-2"></i></li>
+                  <li><i class="fab fa-react p-2"></i></li>
+                  <li><i class="fab fa-bootstrap p-2"></i></li>
+                  <li><i class="fab fa-git-alt p-2"></i></li>
                 </ul>
               </div>
+              <div class="d-flex justify-content-end">
               <a href="#" class="btn btn-primary"
                 >Github <i class="fas fa-arrow-right ms-2"></i
               ></a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="col-sm-6">
-          <div class="card">
+  <!-- end card 3-->
+        <div class="col-sm-12 mb-4">
+          <div class="card bg-light">
             <div class="card-body">
               <h5 class="card-title">DevOps: Web Deploying project</h5>
               <h6 class="card-subtitle mb-2 text-muted">
@@ -224,23 +253,26 @@
               <h6 class="card-subtitle mb-2 text-muted">Tools</h6>
               <div class="dev-tools d-flex flex-row mb-3">
                 <ul class="d-flex justify-content-start">
-                  <li><i class="fab fa-html5 p-2"></i> HTML5</li>
-                  <li><i class="fab fa-css3-alt p-2"></i> CSS3</li>
-                  <li><i class="fab fa-js p-2"></i> JavaScript</li>
-                  <li><i class="fab fa-react p-2"></i> React.js</li>
-                  <li><i class="fab fa-bootstrap p-2"></i> Bootstrap</li>
-                  <li><i class="fab fa-git-alt p-2"></i> Git</li>
+                  <li><i class="fab fa-html5 p-2"></i></li>
+                  <li><i class="fab fa-css3-alt p-2"></i></li>
+                  <li><i class="fab fa-js p-2"></i></li>
+                  <li><i class="fab fa-react p-2"></i></li>
+                  <li><i class="fab fa-bootstrap p-2"></i></li>
+                  <li><i class="fab fa-git-alt p-2"></i></li>
                 </ul>
               </div>
+              <div class="d-flex justify-content-end">
               <a href="#" class="btn btn-primary"
                 >Github <i class="fas fa-arrow-right ms-2"></i
               ></a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-6">
-          <div class="card">
+          <!-- end card 4 -->
+        <div class="col-sm-12 mb-4">
+          <div class="card bg-light">
             <div class="card-body">
               <h5 class="card-title">UI/ UX Design: CM Trail project </h5>
               <h6 class="card-subtitle mb-2 text-muted">
@@ -255,23 +287,26 @@
               <h6 class="card-subtitle mb-2 text-muted">Tools</h6>
               <div class="dev-tools d-flex flex-row mb-3">
                 <ul class="d-flex justify-content-start">
-                  <li><i class="fab fa-html5 p-2"></i> HTML5</li>
-                  <li><i class="fab fa-css3-alt p-2"></i> CSS3</li>
-                  <li><i class="fab fa-js p-2"></i> JavaScript</li>
-                  <li><i class="fab fa-react p-2"></i> React.js</li>
-                  <li><i class="fab fa-bootstrap p-2"></i> Bootstrap</li>
-                  <li><i class="fab fa-git-alt p-2"></i> Git</li>
+                  <li><i class="fab fa-html5 p-2"></i></li>
+                  <li><i class="fab fa-css3-alt p-2"></i></li>
+                  <li><i class="fab fa-js p-2"></i></li>
+                  <li><i class="fab fa-react p-2"></i></li>
+                  <li><i class="fab fa-bootstrap p-2"></i></li>
+                  <li><i class="fab fa-git-alt p-2"></i></li>
                 </ul>
               </div>
+              <div class="d-flex justify-content-end">
               <a href="#" class="btn btn-primary"
                 >Github <i class="fas fa-arrow-right ms-2"></i
               ></a>
             </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-sm-6">
-          <div class="card">
+          <!-- end card 5 -->
+        <div class="col-sm-12 mb-4">
+          <div class="card bg-light">
             <div class="card-body">
               <h5 class="card-title">Senior Project: ApartEase</h5>
               <h6 class="card-subtitle mb-2 text-muted">
@@ -290,23 +325,26 @@
               <h6 class="card-subtitle mb-2 text-muted">Tools</h6>
               <div class="dev-tools d-flex flex-row mb-3">
                 <ul class="d-flex justify-content-start">
-                  <li><i class="fab fa-html5 p-2"></i> HTML5</li>
-                  <li><i class="fab fa-css3-alt p-2"></i> CSS3</li>
-                  <li><i class="fab fa-js p-2"></i> JavaScript</li>
-                  <li><i class="fab fa-react p-2"></i> React.js</li>
-                  <li><i class="fab fa-bootstrap p-2"></i> Bootstrap</li>
-                  <li><i class="fab fa-git-alt p-2"></i> Git</li>
+                  <li><i class="fab fa-html5 p-2"></i></li>
+                  <li><i class="fab fa-css3-alt p-2"></i></li>
+                  <li><i class="fab fa-js p-2"></i> </li>
+                  <li><i class="fab fa-react p-2"></i> </li>
+                  <li><i class="fab fa-bootstrap p-2"></i> </li>
+                  <li><i class="fab fa-git-alt p-2"></i></li>
                 </ul>
               </div>
+              <div class="d-flex justify-content-end">
               <a href="#" class="btn btn-primary"
                 >Github <i class="fas fa-arrow-right ms-2"></i
               ></a>
+                </div>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-6">
-          <div class="card">
+          <!-- end card 6-->
+        <div class="col-sm-12 mb-4">
+          <div class="card bg-light">
             <div class="card-body">
               <h5 class="card-title">Senior Project: ApartEase</h5>
               <h6 class="card-subtitle mb-2 text-muted">
@@ -325,24 +363,71 @@
               <h6 class="card-subtitle mb-2 text-muted">Tools</h6>
               <div class="dev-tools d-flex flex-row mb-3">
                 <ul class="d-flex justify-content-start">
-                  <li><i class="fab fa-html5 p-2"></i> HTML5</li>
-                  <li><i class="fab fa-css3-alt p-2"></i> CSS3</li>
-                  <li><i class="fab fa-js p-2"></i> JavaScript</li>
-                  <li><i class="fab fa-react p-2"></i> React.js</li>
-                  <li><i class="fab fa-bootstrap p-2"></i> Bootstrap</li>
-                  <li><i class="fab fa-git-alt p-2"></i> Git</li>
+                  <li><i class="fab fa-html5 p-2"></i> </li>
+                  <li><i class="fab fa-css3-alt p-2"></i> </li>
+                  <li><i class="fab fa-js p-2"></i> </li>
+                  <li><i class="fab fa-react p-2"></i> </li>
+                  <li><i class="fab fa-bootstrap p-2"></i> </li>
+                  <li><i class="fab fa-git-alt p-2"></i> </li>
                 </ul>
               </div>
+              <div class="d-flex justify-content-end">
               <a href="#" class="btn btn-primary"
                 >Github <i class="fas fa-arrow-right ms-2"></i
               ></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+              <!-- end card 7-->
+    </div>
     </div>
 
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <!-- Education -->
+    <div class="container-fluid ">
+    <div class="container col-xxl-8 px-4 py-5 ">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <h1 class="display-5 fw-bold text-primary lh-1 mb-3">Education</h1>
+      </div>
+      <!-- List all education here -->
+<div class="timeline">
+  <div class="timeline-item left">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h5 class="card-title">Bachelor of Computer Science</h5>
+        <h6 class="card-subtitle mb-2 text-muted">University of Example | 2020-2024</h6>
+        <ul class="list-unstyled">
+          <li>• Major in Software Engineering</li>
+          <li>• GPA: 3.8/4.0</li>
+          <li>• Dean's List: 2020-2024</li>
+          <li>• Relevant Coursework: Web Development, UI/UX Design, Database Systems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h5 class="card-title">High School Diploma</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Example High School | 2016-2020</h6>
+        <ul class="list-unstyled">
+          <li>• Advanced Placement in Computer Science</li>
+          <li>• Student Council Technology Officer</li>
+          <li>• Coding Club President</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+</div> 
+     
+
+
+    <!-- Contact -->
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5 mt-4">
       <div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
           <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
@@ -407,13 +492,10 @@
         </div>
       </div>
     </div>
+
     <!-- link js -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <script src="main.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
